@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: black;
+}
+
+.sections{
+    display: flex;
+    position: absolute;
+    
+}
+
+
+/* Left Side Of website */
+.left_section{
+    min-width:22vw;
+    min-height: 98vh;
+    margin: 8px;
+    border: 0.1px solid greenyellow;
+    background-color: black;
+    overflow: hidden;
+}
+.left_top{
+    height: 156px;
+    border: 0.1px solid white;
+}
+
+/* right side of website */
+.right_section{
+    min-width:75.85vw;
+    /* min-height: 80vh; */
+    margin: 6px;
+    border: 0.1px solid greenyellow;
+    background-color: black;
+    overflow: hidden;
+}
+.nav{
+    height: 64px;
+    border: 0.1px solid white;
+}
+.right_middle{
+    height: 620px;
+
+}
+
+/* Buttom section of website */
+
+.buttom{
+    height: 66px;
+    border: 1px solid white;
+    width: 99%;
+    position:absolute;
+    bottom: 6px;
+    margin-left: 9px;
+    background-color: rgb(203, 159, 203);
+}
