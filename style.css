@@ -58,6 +58,13 @@ body{
     border: 1px solid white;
 
 }
+.labimg{
+    margin-top: 20px;
+    height: 24px;
+    width: 24px;
+    
+    filter: invert(1);
+}
 
 .logo{
     filter: invert(1);
