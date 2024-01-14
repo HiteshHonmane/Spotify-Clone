@@ -54,12 +54,13 @@ body{
     height: 100%;
     margin-top: 6px;
     border-radius: var(--radius);
+    display: flex;
     min-width:vw;
     border: 1px solid white;
 
 }
 .labimg{
-    margin-top: 20px;
+    
     height: 24px;
     width: 24px;
     
@@ -95,6 +96,13 @@ ul{
     width: 24px;
     height: 24px;
     
+}
+.labcontainer{
+    margin-top: 20px;
+    height: 40px;
+    display: flex;
+    color: white;
+    list-style: none;
 }
 
 
