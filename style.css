@@ -1,45 +1,44 @@
-
- 
-*{
+* {
     margin: 0;
     padding: 0;
 
 }
 
 :root {
-    --radius:8px;
-    --bgcolor:#121212;
+    --radius: 8px;
+    --bgcolor: #121212;
 
 }
-    
 
 
 
-body{
+
+body {
     background-color: black;
 }
 
-.sections{
+.sections {
     display: flex;
     position: absolute;
-    
+
 }
 
-.filter{
+.filter {
     filter: invert(1);
 }
 
 
 /* Left Side Of website */
-.left_section{
-    min-width:22vw;
+.left_section {
+    min-width: 22vw;
     min-height: 98vh;
     margin: 8px;
     /* border: 0.1px solid greenyellow; */
     background-color: black;
     overflow: hidden;
 }
-.left_top{
+
+.left_top {
     height: 156px;
     border: 0.1px solid white;
     display: flex;
@@ -49,36 +48,39 @@ body{
     border-radius: 8px;
 }
 
-.left_middle{
+.left_middle {
     position: relative;
     height: 100%;
     margin-top: 6px;
     border-radius: var(--radius);
     display: flex;
-    min-width:vw;
+    min-width: vw;
     border: 1px solid white;
 
 }
-.labimg{
-    
+
+.labimg {
+
     height: 24px;
     width: 24px;
-    
+
     filter: invert(1);
 }
 
-.logo{
+.logo {
     filter: invert(1);
     width: 82px;
     margin: 16px 5px 6px 22px;
     height: 28px;
 }
-ul li{
+
+ul li {
     display: flex;
     gap: 10px;
     align-items: center;
 }
-ul{
+
+ul {
     margin-top: 10px;
     margin-left: 22px;
     display: flex;
@@ -88,16 +90,19 @@ ul{
     font-weight: 700;
     font-size: 16px;
 }
-.home{
+
+.home {
     width: 21px;
-    height:21px;
+    height: 21px;
 }
-.search{
+
+.search {
     width: 24px;
     height: 24px;
-    
+
 }
-.labcontainer{
+
+.labcontainer {
     margin-top: 20px;
     height: 40px;
     display: flex;
@@ -114,56 +119,128 @@ ul{
 
 
 /* right side of website */
-.right_section{
-    min-width:75.85vw;
+.right_section {
+    min-width: 75.85vw;
     /* min-height: 80vh; */
     margin: 6px;
     border: 0.1px solid greenyellow;
     background-color: black;
     overflow: hidden;
 }
-.nav{
+
+.nav {
     height: 64px;
     border: 0.1px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.right_middle{
+
+.right_middle {
     height: 620px;
 
 }
 
 /* Right Top Section Nav */
 
-.arrbtn{
+.arrbtn {
     height: 10px;
 }
 
-.arr_and_btn{
+.arr_and_btn {
     filter: invert(1);
     height: 10px;
     display: flex;
     margin: 10px;
 
 }
-.arrbuttons{
+
+.arrbuttons {
     /* height: 10px; */
     display: flex;
     margin: 10px;
 
 }
 
+/* Right middle */
+
+.playlist {
+    min-height: 50vh;
+    min-width: 70vw;
+    background-image: linear-gradient(to bottom, rgb(34 32 32) , rgb(0, 0, 0));
+
+
+}
+
+.heading {
+    margin-left: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: #f7f7f7;
+}
+
+.cards-container {
+    height: 65vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background: #b0a5a5; */
+}
+
+.card1 {
+    position: relative;
+    top: 10px;
+    margin-left: 12px;
+    /* padding: 1px; */
+    height: 27.32vh;
+    width: 9.32vw;
+    display: flex;
+    background-image: linear-gradient(to bottom, rgb(21, 21, 21), rgb(34 32 32) );
+    flex-direction: column;
+    align-items: center;
+    /* border-radius: 7px; */
+    justify-content: flex-start;
+    border-radius: 10px;
+}
+
+
+.coverimg {
+    margin:15px 15px ;
+    height: 15.87vh;
+    
+    
+}
+.song-info{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    left: -5px;
+}
+h4{
+    color: white;
+    /* display: flex; */
+    
+}
+.song-info p{
+    color: gray;
+    margin-top: 4px;
+    /* width: 100px; */
+}
+
+
 
 
 
 /* Buttom section of website */
 
-.buttom{
+.buttom {
     height: 66px;
     border: 1px solid white;
     width: 99%;
-    position:absolute;
+    position: absolute;
     bottom: 6px;
     margin-left: 9px;
     background-color: rgb(203, 159, 203);
