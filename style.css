@@ -1,14 +1,27 @@
 * {
     margin: 0;
     padding: 0;
-
+    
 }
+
+::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #3f3f3f; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #262626; 
+  }
 
 :root {
     --radius: 8px;
     --bgcolor: #121212;
-
+    
 }
+
 
 
 
@@ -34,13 +47,13 @@ body {
     min-height: 98vh;
     margin: 8px;
     /* border: 0.1px solid greenyellow; */
-    background-color: black;
+    background-color: #000000;
     overflow: hidden;
 }
 
 .left_top {
     height: 156px;
-    border: 0.1px solid white;
+    /* border: 0.1px solid white; */
     display: flex;
     flex-direction: column;
     color: white;
@@ -53,9 +66,12 @@ body {
     height: 100%;
     margin-top: 6px;
     border-radius: var(--radius);
+    background-color: #121212;
     display: flex;
     min-width: vw;
-    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
 
 }
 
@@ -74,13 +90,31 @@ body {
     height: 28px;
 }
 
-ul li {
+.li-of-ul-1{
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-ul {
+.ulli {
+    margin-top: 10px;
+    margin-left: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+.lab-logo-name{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.labcontainer{
     margin-top: 10px;
     margin-left: 22px;
     display: flex;
@@ -110,6 +144,59 @@ ul {
     list-style: none;
 }
 
+.songlist ul li{
+    list-style: none;
+    color: white;
+    margin-left: 18px;
+    display: flex;
+    padding: 10px;
+    border: 1px solid rgb(76 76 76 / 63%);
+    border-radius: 6px;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20px; */
+    list-style: decimal;
+}
+.songlist{
+    height: 500px;
+    overflow: auto;
+}
+
+.song{
+    color: white;
+    margin-left: 18px;
+    display: flex;
+    padding: 10px;
+    border: 1px solid rgb(137, 137, 137);
+    border-radius: 6px;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20px; */
+    list-style: decimal;
+}
+.song-artist{
+    display: flex;
+    flex-direction: column;
+
+}
+.song-container{
+    color: #f7f7f7;
+    display: flex;
+    gap: 24px;
+    margin: 7px 38px 7px 16px;
+    flex-direction: column;
+}
+
+.playsvg{
+    /* filter: invert(1); */
+    height: 35px;
+}
+.music-svg{
+    height: 35px;
+}
+
+
+
 
 
 
@@ -123,14 +210,14 @@ ul {
     min-width: 75.85vw;
     /* min-height: 80vh; */
     margin: 6px;
-    border: 0.1px solid greenyellow;
+    /* border: 0.1px solid greenyellow; */
     background-color: black;
     overflow: hidden;
 }
 
 .nav {
     height: 64px;
-    border: 0.1px solid white;
+    /* border: 0.1px solid white; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,11 +243,35 @@ ul {
 }
 
 .arrbuttons {
-    /* height: 10px; */
     display: flex;
-    margin: 10px;
+    gap: 35px;
+    /* background-color: white; */
+    /* margin: 23px; */
+    padding: 20px;
+    
+    
+}
+.signup-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
 
 }
+.login-btn{
+    background-color: white;
+    width: 113px;
+    height: 48px;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
 
 /* Right middle */
 
@@ -238,8 +349,8 @@ h4{
 
 .buttom {
     height: 66px;
-    border: 1px solid white;
-    width: 99%;
+    /* border: 1px solid white; */
+    width: 76%;
     position: absolute;
     bottom: 6px;
     margin-left: 9px;
