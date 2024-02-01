@@ -33,6 +33,9 @@ body {
 .sections {
     display: flex;
     position: absolute;
+    
+    max-width: 99vw;
+    max-height: 99vh;
 
 }
 
@@ -210,12 +213,19 @@ body {
     cursor: pointer;
 } 
 .playbaricons{
+    width: 100px;
+    margin-right:260px ;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
     cursor: pointer;
 }
+
+.songtime, .songtime{
+    color: white;
+}
+
 
 
 
@@ -326,7 +336,7 @@ body {
     top: 10px;
     margin-left: 12px;
     /* padding: 1px; */
-    height: 27.32vh;
+    min-height: 27.32vh;
     width: 9.32vw;
     display: flex;
     background-image: linear-gradient(to bottom, rgb(21, 21, 21), rgb(34 32 32) );
@@ -340,7 +350,8 @@ body {
 
 .coverimg {
     margin:15px 15px ;
-    height: 15.87vh;
+    width: 8vw;
+    /* max-height: 15.87vh; */
     
     
 }
@@ -353,13 +364,16 @@ body {
 }
 h4{
     color: white;
+    margin: 0px 15px;
     /* display: flex; */
     
 }
-.song-info p{
+.song-info p {
     color: gray;
-    margin-top: 4px;
-    /* width: 100px; */
+    margin: 11px;
+    width: auto;
+    padding: 5px;
+    height: fit-content;
 }
 
 .playbar{
@@ -373,13 +387,15 @@ h4{
 }
 .playbaricons{
     height: 48px;
+   
 }
 .seekbar{
     position: relative;
     bottom: 1px;
     background-color: white;
-    height: 5px;
+    height: 7px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .circle{
     height: 13px;
@@ -387,11 +403,25 @@ h4{
     background-color: white;
     border-radius: 10px;
     position: relative;
-    bottom: 75%;
+    bottom: 50%;
     left: 0%;
     transition: left 0.5s;
     cursor: pointer;
 }
+.songinformation-display{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+
+}
+.songname{
+    width: 500px;
+}
+.songtime{
+    width: 93px;
+}
+
 
 
 
