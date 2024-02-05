@@ -22,10 +22,13 @@
     <Section class="sections">
         <div class="left_section">
             <div class="left_top">
-                <img class="logo" src="assets/logo.svg" alt="">
+                <div class="logo-cross">
+                    <img class="logo" src="assets/logo.svg" alt="">
+                    <img class="cross" height="30px" src="assets/cross.svg" alt="">
+                </div>
                 <ul class="ulli">
-                    <li class="li-of-ul-1" > <img class="home filter" src="assets/home.svg" alt=""> Home</li>
-                    <li class="li-of-ul-1" > <img class="search filter" src="assets/search.svg" alt="">Search </li>
+                    <li class="li-of-ul-1"> <img class="home filter" src="assets/home.svg" alt=""> Home</li>
+                    <li class="li-of-ul-1"> <img class="search filter" src="assets/search.svg" alt="">Search </li>
                 </ul>
 
 
@@ -35,40 +38,34 @@
                     <li class="lab-logo-name"><img class="labimg" src="assets/library.svg" alt="">Your Library</li>
                 </ul>
                 <div class="songlist">
-                <ul class="song-container">
-                    <li class="song">
-                        <img class="music-svg" src="assets/music.svg" alt="">
-                        <div class="song-artist">
-                            <div class="song-name">
+                    <ul class="song-container">
+                        <!-- <li class="song">
+                            <img class="music-svg" src="assets/music.svg" alt="">
+                            <div class="song-artist">
+                                <div class="song-name">
+                                </div>
+                                <div class="artist-name">
+                                </div>
                             </div>
-                            <div class="artist-name">
+                            <div>
+                                <img class="playsvg " src="assets/play.svg" alt="">
                             </div>
-                        </div>
-                        <div >
-                            <img class="playsvg " src="assets/play.svg" alt="">
-                        </div>
-                    </li>
-                    
-                </ul>
+                        </li> -->
+
+                    </ul>
+                </div>
             </div>
-            </div>
-            
+
         </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
         <div class="right_section">
+
             <div class="nav">
+                <img width="20px" src="assets/hamburger.svg" alt="" class="hamburger">
                 <div class="arr_and_btn">
                     <span class="leftarrow">
                         <img class="leftarr arrbtn" src="assets/leftarrow.svg" alt="">
@@ -91,19 +88,20 @@
             <div class="right_middle">
                 <div class="playlist">
                     <h1 class="heading">Spotify Playlist</h1>
-                    <div class="cards-container">
-                        <div class="cards card1">
-                            <img class="coverimg" src="assets/countrysong.png" alt="">
-                            <div class="song-info">
-                                <h4>
-                                    lofi beats
-                                </h4>
-                                <p>
-                                    chill beats, lofi vibes,<br> new tracks every...
-                                </p>
-                            </div>
-                        </div>
+                    <div class="cardscontainerparent">
                         <div class="cards-container">
+                            <div class="cards card1">
+                                <img class="coverimg" src="assets/countrysong.png" alt="">
+                                <div class="song-info">
+                                    <h4>
+                                        lofi beats
+                                    </h4>
+                                    <p>
+                                        chill beats, lofi vibes,<br> new tracks every...
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- <div class="cards-container">
                             <div class="cards card1">
                                 <img class="coverimg" src="assets/latin.png" alt="">
                                 <div class="song-info">
@@ -114,8 +112,8 @@
                                         chill beats, lofi vibes,<br> new tracks every...
                                     </p>
                                 </div>
-                            </div>
-                            <div class="cards-container">
+                            </div> -->
+                            <!-- <div class="cards-container">
                                 <div class="cards card1">
                                     <img class="coverimg" src="assets/madeforyou.png" alt="">
                                     <div class="song-info">
@@ -126,8 +124,8 @@
                                             chill beats, lofi vibes,<br> new tracks every...
                                         </p>
                                     </div>
-                                </div>
-                                <div class="cards-container">
+                                </div> -->
+                            <!-- <div class="cards-container">
                                     <div class="cards card1">
                                         <img class="coverimg" src="assets/hiphop.png" alt="">
                                         <div class="song-info">
@@ -138,50 +136,51 @@
                                                 chill beats, lofi vibes,<br> new tracks every...
                                             </p>
                                         </div>
+                                    </div> -->
+                            <div class="cards-container">
+                                <div class="cards card1">
+                                    <img class="coverimg" src="assets/pop.png" alt="">
+                                    <div class="song-info">
+                                        <h4>
+                                            lofi beats
+                                        </h4>
+                                        <p>
+                                            chill beats, lofi vibes,<br> new tracks every...
+                                        </p>
                                     </div>
-                                    <div class="cards-container">
-                                        <div class="cards card1">
-                                            <img class="coverimg" src="assets/pop.png" alt="">
-                                            <div class="song-info">
-                                                <h4>
-                                                    lofi beats
-                                                </h4>
-                                                <p>
-                                                    chill beats, lofi vibes,<br> new tracks every...
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
                                 </div>
 
                             </div>
                         </div>
 
-                        <div class="playbar">
-                           <div class="songinformation-display">
-                            <div class="songname">
-                                
-                            </div>
-                            <div class="playbaricons">
-                                <img id="previous" class="playprevious" src="assets/playprevious.svg" alt="">
-                                <img id="play" class="playsvg " src="assets/play.svg" alt="">
-                                <img id="next" class="playnext" src="assets/playnext.svg" alt="">
-                            </div>
-                            <div class="songtime">
-                                
-                            </div>
-                           </div>
-                           
-                            
-                            <div class="seekbar">
-                                <div class="circle">
+                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <section class="buttom">
+                </div>
+            </div>
+
+            <div class="playbar">
+                <div class="songinformation-display">
+                    <div class="songname">
+
+                    </div>
+                    <div class="playbaricons">
+                        <img id="previous" class="playprevious" src="assets/playprevious.svg" alt="">
+                        <img id="play" class="playsvg " src="assets/play.svg" alt="">
+                        <img id="next" class="playnext" src="assets/playnext.svg" alt="">
+                    </div>
+                    <div class="songtime">
+
+                    </div>
+                </div>
+
+
+                <div class="seekbar">
+                    <div class="circle">
+
+                    </div>
+                </div>
+            </div>
+            <!-- <section class="buttom">
 
                         </section> -->
     </Section>

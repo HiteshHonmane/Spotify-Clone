@@ -105,6 +105,14 @@ async function main() {
         document.querySelector(".circle").style.left = percent + "%"
         currentSong.currentTime = ((currentSong.duration)*percent)/100
     })
+    //Hamburger Side bar 
+    document.querySelector(".hamburger").addEventListener("click",()=>{
+        document.querySelector(".left_section").style.left = "0%"
+    })
+    //
+    document.querySelector(".cross").addEventListener('click',()=>{
+        document.querySelector(".left_section").style.left= "-120%"
+    })
 
 }
 main()
