@@ -95,6 +95,7 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
 }
 
 .ulli {
@@ -318,6 +319,10 @@ body {
 .list{
     display: flex;
     flex-wrap: wrap;
+}
+#audio{
+    width: 100px;
+    border-radius: 50%;
 }
 
 .playlist {

@@ -5,21 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clone</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
 </head>
 
-
-
 <body>
+
     <!-- Understanding of this code is simple by understanding the sections of this webiste by usign class name -->
 
-    <Section class="sections">
+    <section class="sections">
         <div class="left_section">
             <div class="left_top">
                 <div class="logo-cross">
@@ -28,10 +26,10 @@
                 </div>
                 <ul class="ulli">
                     <li class="li-of-ul-1"> <img class="home filter" src="assets/home.svg" alt=""> Home</li>
-                    <li class="li-of-ul-1"> <img class="search filter" src="assets/search.svg" alt="">Search </li>
+                    <li class="li-of-ul-1"> <img class="search filter" src="assets/search.svg" alt="">
+                        <input class="search-input" type="text">
+                    </li>
                 </ul>
-
-
             </div>
             <div class="left_middle">
                 <ul class="labcontainer">
@@ -39,31 +37,13 @@
                 </ul>
                 <div class="songlist">
                     <ul class="song-container">
-                        <!-- <li class="song">
-                            <img class="music-svg" src="assets/music.svg" alt="">
-                            <div class="song-artist">
-                                <div class="song-name">
-                                </div>
-                                <div class="artist-name">
-                                </div>
-                            </div>
-                            <div>
-                                <img class="playsvg " src="assets/play.svg" alt="">
-                            </div>
-                        </li> -->
-
+                        <!-- Dynamic content will be added here by JavaScript -->
                     </ul>
                 </div>
             </div>
-
         </div>
 
-
-
-
-
         <div class="right_section">
-
             <div class="nav">
                 <img width="20px" src="assets/hamburger.svg" alt="" class="hamburger">
                 <div class="arr_and_btn">
@@ -75,57 +55,37 @@
                     </span>
                 </div>
                 <div class="arrbuttons">
-                    <button class="signup-btn">
-                        Sign up
-                    </button>
-                    <button class="login-btn">
-                        Login
-                    </button>
+                    <button class="signup-btn">Sign up</button>
+                    <button class="login-btn">Login</button>
                 </div>
-
             </div>
-
             <div class="right_middle">
-                
                 <div class="playlist">
                     <h1 class="heading">Spotify Playlist</h1>
                     <div class="list"></div>
+                    
+                    
                 </div>
-
-
-
-
             </div>
         </div>
 
         <div class="playbar">
             <div class="songinformation-display">
-                <div class="songname">
-
-                </div>
+                <div class="songname"></div>
                 <div class="playbaricons">
                     <img id="previous" class="playprevious" src="assets/playprevious.svg" alt="">
-                    <img id="play" class="playsvg " src="assets/play.svg" alt="">
+                    <img id="play" class="playsvg" src="assets/play.svg" alt="">
                     <img id="next" class="playnext" src="assets/playnext.svg" alt="">
                 </div>
-                <div class="songtime">
-
-                </div>
+                <div class="songtime"></div>
             </div>
-
-
             <div class="seekbar">
-                <div class="circle">
-
-                </div>
+                <div class="circle"></div>
             </div>
         </div>
-        <!-- <section class="buttom">
+    </section>
 
-                        </section> -->
-    </Section>
-
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
