@@ -325,6 +325,11 @@ body {
     border-radius: 50%;
 }
 
+.playButton{
+    position: absolute;
+    bottom: -25px;
+}
+
 .playlist {
     min-height: 50vh;
     min-width: 70vw;

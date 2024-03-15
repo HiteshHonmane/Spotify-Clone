@@ -40,10 +40,29 @@ document.addEventListener("DOMContentLoaded", function () {
                             <img class="coverimg" src="${songI}" alt="">
                             <div class="song-info">
                                 <h4>${songN}</h4>
-                                <audio id="audio"  controls="" src="${SongSrc}"></audio>
+                                <audio class="audio" src="${SongSrc}"></audio>
+                                <img width='50px' class='playButton' src="assets/play.svg" alt="">
+                                
                             </div>
                         </div>`;
                 });
+
+                // Attach event listeners for play/pause functionality
+                const playButtons = document.querySelectorAll(".playButton");
+                playButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const audio = this.parentNode.querySelector('.audio');
+                        if (audio.paused) {
+                            audio.play();
+                            this.innerHTML = '<path fill="currentColor" d="M14 5l-6 4v6l6 4z"/>'; // Change SVG to pause icon
+                        } else {
+                            audio.pause();
+                            audio.currentTime = 0; // Resets audio to the beginning
+                            this.innerHTML = '<path fill="currentColor" d="M8 5v14l11-7z"/>'; // Change SVG back to play icon
+                        }
+                    });
+                });
+
             } catch (error) {
                 console.error(error);
             }
@@ -54,8 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Attach the search event listener
         search.addEventListener('click', searchHandler);
-
-        
     }
 
     // Call the function
