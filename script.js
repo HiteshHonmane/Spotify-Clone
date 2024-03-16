@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     async function cardCategory() {
         const input = document.querySelector(".search-input");
         const search = document.querySelector(".search");
+        const playBarPlay = document.querySelector('#play');
 
-        // Set default value on page load
-        input.value = "eminem";
+        let currentPlayingAudio = null; // Variable to store currently playing audio
 
         // Define the search event handler function
         const searchHandler = async () => {
             let value = input.value;
-            const artist = value ? value : "eminem";
+            const artist = value ? value : "eminem"; // Default artist
             const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${artist}`;
             const options = {
                 method: 'GET',
@@ -35,32 +35,55 @@ document.addEventListener("DOMContentLoaded", function () {
                     const songN = song.title;
                     const SongSrc = song.preview;
 
-                    categoryCard.innerHTML += `
-                        <div class="cards">
-                            <img class="coverimg" src="${songI}" alt="">
-                            <div class="song-info">
-                                <h4>${songN}</h4>
-                                <audio class="audio" src="${SongSrc}"></audio>
-                                <img width='50px' class='playButton' src="assets/play.svg" alt="">
-                                
-                            </div>
+                    const card = document.createElement('div');
+                    card.classList.add('cards');
+                    card.innerHTML = `
+                        <img class="coverimg" src="${songI}" alt="">
+                        <div class="song-info">
+                            <div class='song-name'>${songN}</div> 
+                        </div>
+                        <div class="card-icon">
+                            <audio class="audio" src="${SongSrc}"></audio>
+                            <img width='50px' class='playButton' src="assets/play.svg" alt="">
                         </div>`;
-                });
 
-                // Attach event listeners for play/pause functionality
-                const playButtons = document.querySelectorAll(".playButton");
-                playButtons.forEach(button => {
-                    button.addEventListener('click', function() {
-                        const audio = this.parentNode.querySelector('.audio');
+                    // Attach event listener for play/pause functionality
+                    const playButton = card.querySelector('.playButton');
+                    const audio = card.querySelector('.audio');
+
+                    playButton.addEventListener('click', function () {
+                        // Pause all other audio elements
+                        document.querySelectorAll('.audio').forEach(a => {
+                            if (a !== audio) {
+                                a.pause();
+                                a.currentTime = 0; // Reset to beginning
+                                const otherPlayButton = a.parentNode.querySelector(".playButton");
+                                if (otherPlayButton) {
+                                    otherPlayButton.src = 'assets/play.svg';
+                                }
+                            }
+                        });
+
                         if (audio.paused) {
-                            audio.play();
-                            this.innerHTML = '<path fill="currentColor" d="M14 5l-6 4v6l6 4z"/>'; // Change SVG to pause icon
+                            audio.play()
+                                .then(() => {
+                                    playButton.src = "assets/pause.svg"; // Change to pause icon
+                                    playBarPlay.src = "assets/pause.svg"; // Change playbar play button icon to pause
+                                    currentPlayingAudio = audio; // Update currently playing audio
+                                })
+                                .catch(error => {
+                                    console.error("Error playing audio:", error);
+                                });
                         } else {
                             audio.pause();
                             audio.currentTime = 0; // Resets audio to the beginning
-                            this.innerHTML = '<path fill="currentColor" d="M8 5v14l11-7z"/>'; // Change SVG back to play icon
+                            playButton.src = "assets/play.svg"; // Change back to play icon
+                            playBarPlay.src = "assets/play.svg"; // Change playbar play button icon to play
+                            currentPlayingAudio = null; // No audio is currently playing
                         }
                     });
+
+                    categoryCard.appendChild(card);
                 });
 
             } catch (error) {
@@ -73,6 +96,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Attach the search event listener
         search.addEventListener('click', searchHandler);
+
+        // Attach event listener for play/pause functionality for play bar play button
+        playBarPlay.addEventListener('click', function () {
+            if (currentPlayingAudio) {
+                if (currentPlayingAudio.paused) {
+                    currentPlayingAudio.play()
+                    console.log(currentPlayingAudio.title)
+                        .then(() => {
+                            playBarPlay.src = "assets/pause.svg"; // Change playbar play button icon to pause
+                            
+                        })
+                        .catch(error => {
+                            console.error("Error playing audio:", error);
+                        });
+                } else {
+                    currentPlayingAudio.pause();
+                    currentPlayingAudio.currentTime = 0; // Resets audio to the beginning
+                    playBarPlay.src = "assets/play.svg"; // Change playbar play button icon to play
+                    currentPlayingAudio = null; // No audio is currently playing
+                    
+                }
+            } else {
+                // If no audio is currently playing, find the first audio element and play it
+                const firstAudio = document.querySelector('.audio');
+                if (firstAudio) {
+                    firstAudio.play()
+                        .then(() => {
+                            playBarPlay.src = "assets/pause.svg"; // Change playbar play button icon to pause
+                            currentPlayingAudio = firstAudio; // Update currently playing audio
+                        })
+                        .catch(error => {
+                            console.error("Error playing audio:", error);
+                        });
+                }
+            }
+        });
     }
 
     // Call the function
