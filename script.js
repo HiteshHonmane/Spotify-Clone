@@ -14,10 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const artist = value ? value : "eminem"; // Default artist
             const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${artist}`;
             const options = {
-                method: 'GET',
+                method: "GET",
                 headers: {
-                    'X-RapidAPI-Key': '2f8ec1fc40msh87d5856848d2f52p1b7503jsne20b9ce85403',
-                    'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+                    "X-RapidAPI-Key":
+                        "2f8ec1fc40msh87d5856848d2f52p1b7503jsne20b9ce85403",
+                    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
                 },
             };
 
@@ -27,13 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log(result);
 
                 const categoryCard = document.querySelector(".list");
+                const songlist = document.querySelector(".song-container");
+
                 // Clear previous results
                 categoryCard.innerHTML = "";
 
-                result.data.forEach(song => {
+                //Loop for song list
+                result.data.forEach((song) => {
                     const songI = song.album.cover;
                     const songN = song.title;
                     const SongSrc = song.preview;
+                    const card = document.createElement("div");
+                    card.classList.add("cards");
 
                     const card = document.createElement('div');
                     card.classList.add('cards');
@@ -95,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         searchHandler();
 
         // Attach the search event listener
-        search.addEventListener('click', searchHandler);
+        search.addEventListener("click", searchHandler);
 
         // Attach event listener for play/pause functionality for play bar play button
         playBarPlay.addEventListener('click', function () {
