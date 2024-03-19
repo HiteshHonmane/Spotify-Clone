@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Here We go");
+
+   
 
     async function cardCategory() {
         const input = document.querySelector(".search-input");
@@ -7,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const playBarPlay = document.querySelector("#play");
 
         let currentPlayingAudio = null; // Variable to store currently playing audio
+        let currentPlayingSongName = ""; // Variable to store the name of the currently playing song
 
         // Define the search event handler function
         const searchHandler = async () => {
@@ -76,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     playButton.src = "assets/pause.svg"; // Change to pause icon
                                     playBarPlay.src = "assets/pause.svg"; // Change playbar play button icon to pause
                                     currentPlayingAudio = audio; // Update currently playing audio
+                                    console.log(currentPlayingAudio)
                                 })
                                 .catch((error) => {
                                     console.error("Error playing audio:", error);
@@ -198,6 +201,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    const hamburger = document.querySelector('.hamburger')
+    const cross = document.querySelector(".cross")
+
+    hamburger.addEventListener('click',()=>{
+        document.querySelector('.left_section').style.left= -1 + "%"
+
+    })
+    cross.addEventListener('click',()=>{
+        document.querySelector('.left_section').style.left = -100 + '%'
+    })
+
 
     // Call the function
     cardCategory();

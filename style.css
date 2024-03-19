@@ -491,6 +491,8 @@ body {
     .cross{
         display: none;
     }
+ 
+    
     
 }
 
@@ -644,6 +646,20 @@ body {
     }
     .arr_and_btn{
         display: none;
+    }
+
+    .search-input{
+        border-radius: 15px;
+        width:40vw ;
+        height: 3.3vh;
+        background-color: #3f3f3f;
+        outline: none;
+        color: #999999;
+        border:none;
+        padding-left: 10px;
+        cursor: pointer;
+        transition: transform 0.2s ease-out
+        
     }
 
 }
