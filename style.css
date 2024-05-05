@@ -27,7 +27,7 @@
 
 
 body {
-    background-color: black;
+    background-color: rgb(84, 88, 117);
 }
 
 .sections {
@@ -104,10 +104,10 @@ body {
 }
 
 .logo {
-    filter: invert(1);
-    width: 82px;
+    
+    width: 50px;
     margin: 16px 5px 6px 22px;
-    height: 28px;
+    
 }
 
 .li-of-ul-1 {
@@ -416,7 +416,7 @@ body {
 }
 .card-icon{
   display: flex;
-  justify-content: ;
+ 
 }
 
 .song-info p {
