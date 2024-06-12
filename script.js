@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentPlayingSongName = ""; // Variable to store the name of the currently playing song
 
         // Define the search event handler function
+        
         const searchHandler = async () => {
             let value = input.value;
             const artist = value ? value : "eminem"; // Default artist
